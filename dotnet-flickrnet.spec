@@ -2,7 +2,7 @@
 Summary:	.NET support for Flickr
 Name:		dotnet-flickrnet
 Version:	2.1.5
-Release:	3
+Release:	4
 License:	MIT
 Group:		Libraries
 Source0:	FlickrNet-25207.zip
@@ -10,6 +10,8 @@ Source0:	FlickrNet-25207.zip
 Source1:	flickrnet.pc
 Patch0:		%{name}-assemblyinfo.patch
 URL:		http://www.codeplex.com/FlickrNet
+# FIXME: ugly workaround for broken patch handling in our CVS
+BuildRequires:	dos2unix
 BuildRequires:	mono-csharp >= 1.1.16.1
 BuildRequires:	pkgconfig
 ExcludeArch:	i386
@@ -23,6 +25,7 @@ and Mono.
 
 %prep
 %setup -q -c -n FlickrNet
+dos2unix FlickrNet/AssemblyInfo.cs
 %patch0 -p1
 
 %build
