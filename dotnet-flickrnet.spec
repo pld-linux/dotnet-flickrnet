@@ -1,12 +1,12 @@
 %include	/usr/lib/rpm/macros.mono
 Summary:	.NET support for Flickr
 Name:		dotnet-flickrnet
-Version:	2.1.5
-Release:	4
+Version:	2.2.0
+Release:	1
 License:	MIT
 Group:		Libraries
-Source0:	FlickrNet-25207.zip
-# Source0-md5:	d20fe0d25a3888300f21e5ad3895c141
+Source0:	FlickrNet2.2-Src-48055.zip
+# Source0-md5:	534b3436762ce1bfb2568c9774340f0c
 Source1:	flickrnet.pc
 Patch0:		%{name}-assemblyinfo.patch
 URL:		http://www.codeplex.com/FlickrNet
