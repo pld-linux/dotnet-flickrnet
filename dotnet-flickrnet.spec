@@ -34,16 +34,16 @@ gmcs -target:library -out:FlickrNet.dll -r:System.Web.dll *.cs
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_libdir}/pkgconfig/,%{_libdir}/mono/flickrnet-%{version}}
-install FlickrNet/FlickrNet.dll $RPM_BUILD_ROOT%{_libdir}/mono/flickrnet-%{version}
-install -Dm644 %{SOURCE1} $RPM_BUILD_ROOT%{_libdir}/pkgconfig/
-sed -i "s/@VERSION@/%{version}/" $RPM_BUILD_ROOT%{_libdir}/pkgconfig/flickrnet.pc
+install -d $RPM_BUILD_ROOT{%{_datadir}/pkgconfig/,/lib/mono/flickrnet-%{version}}
+install FlickrNet/FlickrNet.dll $RPM_BUILD_ROOT/lib/mono/flickrnet-%{version}
+install -Dm644 %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/pkgconfig/
+sed -i "s/@VERSION@/%{version}/" $RPM_BUILD_ROOT%{_datadir}/pkgconfig/flickrnet.pc
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%dir %{_libdir}/mono/flickrnet-%{version}
-%{_libdir}/mono/flickrnet-%{version}/*.dll
-%{_pkgconfigdir}/flickrnet.pc
+%dir /lib/mono/flickrnet-%{version}
+/lib/mono/flickrnet-%{version}/*.dll
+%{_datadir}/pkgconfig/flickrnet.pc
