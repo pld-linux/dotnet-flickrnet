@@ -14,6 +14,7 @@ URL:		http://www.codeplex.com/FlickrNet
 BuildRequires:	dos2unix
 BuildRequires:	mono-csharp >= 1.1.16.1
 BuildRequires:	pkgconfig
+BuildRequires:	unzip
 ExcludeArch:	i386
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
