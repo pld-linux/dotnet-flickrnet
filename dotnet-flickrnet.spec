@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.mono
 Summary:	.NET support for Flickr
 Name:		dotnet-flickrnet
 Version:	2.2.0
