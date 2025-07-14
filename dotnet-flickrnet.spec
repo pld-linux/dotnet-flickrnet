@@ -26,7 +26,7 @@ and Mono.
 %prep
 %setup -q -c -n FlickrNet
 dos2unix FlickrNet/AssemblyInfo.cs
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 cd FlickrNet
