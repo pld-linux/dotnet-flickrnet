@@ -1,7 +1,7 @@
 Summary:	.NET support for Flickr
 Name:		dotnet-flickrnet
 Version:	2.2.0
-Release:	1
+Release:	2
 License:	MIT
 Group:		Libraries
 Source0:	FlickrNet2.2-Src-48055.zip
