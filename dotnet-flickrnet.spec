@@ -1,7 +1,11 @@
+#
+# managed dotnet code, no native debug sources
+%undefine	_debugsource_packages
+#
 Summary:	.NET support for Flickr
 Name:		dotnet-flickrnet
 Version:	2.2.0
-Release:	2
+Release:	3
 License:	MIT
 Group:		Libraries
 Source0:	FlickrNet2.2-Src-48055.zip
@@ -30,7 +34,7 @@ dos2unix FlickrNet/AssemblyInfo.cs
 
 %build
 cd FlickrNet
-gmcs -target:library -out:FlickrNet.dll -r:System.Web.dll *.cs
+mcs -target:library -out:FlickrNet.dll -r:System.Web.dll *.cs
 
 %install
 rm -rf $RPM_BUILD_ROOT
